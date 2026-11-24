@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { QUESTION_BANK, ROLES_META } from './data/questions';
 import './App.css';
 
-const API_BASE = 'http://localhost:5000/api/interview';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/interview';
 const QUESTION_DURATION = 120;
 
 export default function App() {
